@@ -1,0 +1,5 @@
+System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Delegate method)
+   at SageDoaNotaPR.CameraScreen.videoSource_NewFrame(Object sender, NewFrameEventArgs eventArgs) in R:\Workspace\BR-Labs-Foundation-DoaNota\BR-Labs-Foundation-DoaNota\DoaNota\UserControls\CameraScreen.cs:line 215
