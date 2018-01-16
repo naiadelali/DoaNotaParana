@@ -1,6 +1,6 @@
 ﻿# Doa Nota Paraná
 
-O que é?
+O que é?:
 	-Doa Nota Paraná é um programa para auxiliar no envio de chaves de Notas Fiscais de consumidor eletrônica (NFC-e) para doação a entidades beneficentes cadastradas no programa Nota Paraná. 
 	-A ideia do programa é acelerar o processo de doação efetuando a leitura do QR Code presente nas notas e enviando automaticamente para o site do governo do estado. 
 	-Anteriormente sem a utilização do programa os usuários precisavam digitar manualmente as chaves de 44 posições no site do governo, tornando o trabalho árduo e cansativo. 
