@@ -79,5 +79,6 @@ Para Desenvolvedores:
 	-Este arquivo foi removido por questão de segurança e privacidade.
 
 Licença de uso e do código:
+
 	-Este software e seu código estão sob a licença GNU Lesser General Public License v3.0.
 	-Este software está sendo distribuido gratuitamente.
