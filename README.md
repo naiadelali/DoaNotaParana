@@ -10,6 +10,7 @@ O que é?
 Como instalar:
 
 	Os instaladores e executáveis estão no link:
+	https://sourceforge.net/projects/doanotaparana/
 	https://github.com/rdaron88/DoaNotaParana/releases
 
 	Alternativa 1:
