@@ -56,6 +56,7 @@ Como utilizar:
 		-Coluna “Mensagens de retorno” mostra mais informações do envio.
 
 Informações Adicionais:
+
 	-A nota deve ter sido emitida por uma empresa do Paraná.
 	-A nota deve ter sido emitida há menos de 1 mês.
 	-As notas aparecerão com erros caso, por algum motivo o estado recuse a doação.
@@ -69,6 +70,7 @@ Dicas de uso:
 
 
 Para Desenvolvedores:
+
 	-Para compilar é necessário remover o " - Sample Without Keys
 " deixando apenas a extensão resx do arquivo abaixo.
 		-DoaNota/Properties/Resources.resx - Sample Without Keys
