@@ -248,11 +248,6 @@ namespace DoaNotaPR
         
         private void videoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            
-            //Bitmap image2 = new Bitmap(eventArgs.Frame);
-
-            //image2 = AdjustContrast(MakeGrayscale3(image2), 1.50f);
-
             try
             {
                 if (frameSkipCount > 30)
@@ -278,8 +273,9 @@ namespace DoaNotaPR
                         image.RotateFlip(RotateFlipType.Rotate180FlipY);
                     
                     pictureBoxSource.BackgroundImage = image;
+                  
                     pictureBoxSource.BackgroundImageLayout = ImageLayout.Stretch;
-
+                   
                     if (image != null)
                     {
                         var message = ExtractQRCodeMessageFromImage((MakeGrayscale3(image)));// AdjustContrast(MakeGrayscale3(image),3.00f));
