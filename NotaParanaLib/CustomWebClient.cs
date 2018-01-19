@@ -26,7 +26,7 @@ namespace NotaParanaLib
             return StatusCode == 302 && !string.IsNullOrEmpty(ResponseHeaders["Location"]);
         }
 
-        public  string UploadString(string address, string data)
+        public string UploadString(string address, string data)
         {
             try
             {

@@ -223,4 +223,10 @@
   <data name="Key" xml:space="preserve">
     <value></value>
   </data>
+  <data name="updatekey" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="urlUpdate" xml:space="preserve">
+    <value></value>
+  </data>
 </root>

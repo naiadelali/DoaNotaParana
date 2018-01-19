@@ -45,10 +45,10 @@ namespace DoaNotaPR
                 InitializeComponent();
 
 #if PORTABLE
-                //Task t = Task.Run(() =>
-                //{
-                //    new UpdateHelper().Update();
-                //});
+                Task t = Task.Run(() =>
+                {
+                    new UpdateHelper().Update();
+                });
 #endif
                 DoaNotaManagement.Placar = new Classes.Placar();
                 DoaNotaManagement.FilaPendente = new Queue<Classes.Data.NotaFiscal>();

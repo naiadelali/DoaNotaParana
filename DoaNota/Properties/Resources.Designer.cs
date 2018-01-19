@@ -405,5 +405,23 @@ namespace DoaNotaPR.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to $2a$10$nzXL/SvsJJYQr933dGz6HeTN4OBNFzKO1bPJDW.P9lOk/D2xrseUq.
+        /// </summary>
+        internal static string updatekey {
+            get {
+                return ResourceManager.GetString("updatekey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://api.jsonbin.io/b/5a5f6e28acbc7b5460be5314/1.
+        /// </summary>
+        internal static string urlUpdate {
+            get {
+                return ResourceManager.GetString("urlUpdate", resourceCulture);
+            }
+        }
     }
 }

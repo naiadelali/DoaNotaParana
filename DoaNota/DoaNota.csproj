@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>https://sage365-my.sharepoint.com/personal/rodrigo_wang_sage_com/_layouts/15/guestaccess.aspx%3fguestaccesstoken=7lScCXNTuAh5IIkPTpc5kXxnrbXzvJ3GPdi5Nhv4QTU%253d&amp;folderid=2_049f2aae6de0a4218bd2226f88c1cb81a&amp;rev=1/</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>36</ApplicationRevision>
+    <ApplicationRevision>37</ApplicationRevision>
     <ApplicationVersion>1.1.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
