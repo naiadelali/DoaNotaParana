@@ -26,7 +26,7 @@ namespace DoaNotaPR.Classes
                     File.Delete(string.Format("{0}.bak", nomeExe));
 
                 WebClient webClient = new WebClient();
-                webClient.Headers.Add("secret-key", Properties.Resources.updatekey);
+                //webClient.Headers.Add("secret-key", Properties.Resources.updatekey);
                 AtualizacaoInfo atualizacaoInfo = JsonConvert.DeserializeObject<AtualizacaoInfo>(webClient.DownloadString(ENDERECO_BASE));
 
                 System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();

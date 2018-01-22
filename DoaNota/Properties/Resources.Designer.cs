@@ -416,7 +416,7 @@ namespace DoaNotaPR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://api.jsonbin.io/b/5a5f6e28acbc7b5460be5314/1.
+        ///   Looks up a localized string similar to http://versaodoanota.therobotdragon.com/.
         /// </summary>
         internal static string urlUpdate {
             get {
