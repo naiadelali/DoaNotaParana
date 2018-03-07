@@ -18,16 +18,19 @@ namespace DoaNotaPR.Classes
         public bool Update()
         {
             var update = false;
+            WebClient webClient = new WebClient();
+            string nomeExe = Assembly.GetEntryAssembly().GetName().Name;
+            AtualizacaoInfo atualizacaoInfo = null;
             try
             {
-                string nomeExe = Assembly.GetEntryAssembly().GetName().Name;
+                
 
                 if (File.Exists(string.Format("{0}.bak", nomeExe)))
                     File.Delete(string.Format("{0}.bak", nomeExe));
 
-                WebClient webClient = new WebClient();
+                
                 //webClient.Headers.Add("secret-key", Properties.Resources.updatekey);
-                AtualizacaoInfo atualizacaoInfo = JsonConvert.DeserializeObject<AtualizacaoInfo>(webClient.DownloadString(ENDERECO_BASE));
+                atualizacaoInfo = JsonConvert.DeserializeObject<AtualizacaoInfo>(webClient.DownloadString(ENDERECO_BASE));
 
                 System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
                 FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
@@ -35,14 +38,16 @@ namespace DoaNotaPR.Classes
 
                 if (atualizacaoInfo.version <= version || MessageBox.Show("Existe uma nova versão disponível deste aplicativo. Deseja atualizar agora?", "Doa Nota Paraná", MessageBoxButtons.YesNo) == DialogResult.No)
                     return true;
-
+            }
+            catch (Exception ex)
+            {
+                new ExceptionFileHandler().CreateCrashFile($"{ex.ToString()}");
+                return true;
+            }
+                try { 
                 update = true;
 
                 BaixarAtualizacaoESubstitui(nomeExe, webClient, atualizacaoInfo);
-
-                
-                
-
             }
             catch (Exception ex)
             {
