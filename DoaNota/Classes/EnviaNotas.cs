@@ -93,8 +93,16 @@ namespace DoaNotaPR.Classes
                             notaEnviar.CNPJInstituicao = DoaNotaManagement.Settings.CNPJInst;
 
                             notaEnviar.MensagemRetornoEnvioDoacao = wcpr.DoarNota(new Utils().RemoveFormat(DoaNotaManagement.Settings.CNPJInst, 14), notaEnviar.Chave);
+                           
+                            if (notaEnviar.MensagemRetornoEnvioDoacao.Contains(Constantes.MENSAGEM_ERRO_SESSAO_ATIVA))
+                            {
+                                wcpr.EncerrarSessoesAtivas();
+                                wcpr.Login(DoaNotaManagement.Settings.CPF, DoaNotaManagement.Settings.Password);
+                                notaEnviar.MensagemRetornoEnvioDoacao = wcpr.DoarNota(new Utils().RemoveFormat(DoaNotaManagement.Settings.CNPJInst, 14), notaEnviar.Chave);
 
-                          
+                            }
+
+
                             if (notaEnviar.MensagemRetornoEnvioDoacao.Contains(Constantes.MENSAGEM_SUCESSO_DOACAO))
                             {
                                 DoaNotaManagement.IncrementarEnviado(true);
@@ -122,6 +130,7 @@ namespace DoaNotaPR.Classes
                                 }
                             }
                         }
+
                     }
 
                     Thread.Sleep(0);

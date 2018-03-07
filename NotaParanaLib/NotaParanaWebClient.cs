@@ -122,13 +122,25 @@ namespace NotaParanaLib
         
         }
 
+        public void  EncerrarSessoesAtivas()
+        {
+            webClient.DownloadString("https://notaparana.pr.gov.br/nfprweb/publico/sair");
+        }
+
         public string DoarNota(string cnpj, string chave)
         {
-            var teste = webClient.DownloadString("https://notaparana.pr.gov.br/nfprweb/DoacaoDocumentoFiscalCadastrar");
+            var htmlInicial = webClient.DownloadString("https://notaparana.pr.gov.br/nfprweb/DoacaoDocumentoFiscalCadastrar");
             HtmlDocument doc = new HtmlDocument();
-            doc.LoadHtml(teste);
-
+            doc.LoadHtml(htmlInicial);
+            
             var info = doc.GetElementbyId("value");
+
+           
+            if (info == null)
+            {
+                return doc.DocumentNode.SelectSingleNode("//div[@class='alert alert-danger full']").InnerText;                
+            }
+
             var value = info.GetAttributeValue("value", "none");
 
             var postData = new StringBuilder();
@@ -153,6 +165,8 @@ namespace NotaParanaLib
 
         protected virtual void Dispose(bool disposing)
         {
+            EncerrarSessoesAtivas();
+
             if (disposed)
                 return;
 

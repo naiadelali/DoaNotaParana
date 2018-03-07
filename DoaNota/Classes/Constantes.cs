@@ -8,6 +8,7 @@ namespace DoaNotaPR.Classes
 {
     public class Constantes
     {
+        public static readonly string MENSAGEM_ERRO_SESSAO_ATIVA = "O usuário autenticado possui mais de uma sessão ativa";
         public static readonly string MENSAGEM_SUCESSO_DOACAO = "Documento fiscal doado com sucesso!";
         public static readonly string  MENSAGEM_NENHUMA_ENTIDADE_ENCONTRADA = "Nenhuma entidade encontrada.";
         public static readonly string MENSAGEM_CNPJ_ENTIDADE_INCORRETO = "O CNPJ da instituição está incorreto. Por favor corrija o CNPJ com a instituição correta.";
