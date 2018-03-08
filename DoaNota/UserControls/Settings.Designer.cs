@@ -274,8 +274,8 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Enviar todas as notas. (Recomendado)",
-            "Não enviar notas expiradas."});
+            "Enviar todas as notas.",
+            "Não enviar notas expiradas. (Recomendado)"});
             this.comboBox1.Location = new System.Drawing.Point(13, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 21);

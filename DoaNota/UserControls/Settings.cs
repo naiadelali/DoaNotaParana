@@ -275,12 +275,12 @@ namespace DoaNotaPR
             //Não enviar notas com mais de 30 dias. (Obsoleto)
             //Não enviar notas com mais de 60 dias. (Obsoleto)
 
-            if (comboBox1.Items[comboBox1.SelectedIndex] as string == "Enviar todas as notas. (Recomendado)")
+            if (comboBox1.Items[comboBox1.SelectedIndex] as string == "Enviar todas as notas.")
             {
                 ValidarNotas = false;
                 prazoValidacao = 0;
             }
-            else if (comboBox1.Items[comboBox1.SelectedIndex] as string == "Não enviar notas expiradas.")
+            else if (comboBox1.Items[comboBox1.SelectedIndex] as string == "Não enviar notas expiradas. (Recomendado)")
             {
                 ValidarNotas = true;
                 prazoValidacao = 0;
