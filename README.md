@@ -1,5 +1,18 @@
 ﻿# Doa Nota Paraná
 
+# A partir do dia 08 de março de 2018 o Governo do Estado do Paraná por meio do seu Secretário de Estado da Fazenda, pela RESOLUÇÃO SEFA Nº 070/2018, proibiu a utilização de Software para auxilio na doação de notas ao programa Nota Paraná. Para doação agora é necessário ser feito manualmente pelo site do programa ou app disponibilizado pelo governo. O código será mantido apenas para fins educacionais e não deve ser utilizado para doação de notas.
+
+Segue a parte da resolução que define a proibição:
+
+“Art. 2.º A utilização dos créditos pelo consumidor e pela entidade sem fins lucrativos poderá ser suspensa, de forma preventiva, quando constatada a existência de: “
+
+“V - utilização de “software” robô, destinado à captação de dados de notas fiscais eletrônicas e à inserção de dados no sistema do Programa Nota Paraná; “
+
+Segue o link do decreto:
+http://www.sefanet.pr.gov.br/dados/SEFADOCUMENTOS/101201800070.pdf
+
+
+
 O que é?
 
 	-Doa Nota Paraná é um programa para auxiliar no envio de chaves de Notas Fiscais de consumidor eletrônica (NFC-e) para doação a entidades beneficentes cadastradas no programa Nota Paraná. 
