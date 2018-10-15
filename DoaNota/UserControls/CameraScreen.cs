@@ -131,6 +131,11 @@ namespace DoaNotaPR
 
         private void AddInvoiceManally()
         {
+            //string myteste = "";
+            //var testo = GetKey(out myteste, tbManualInput.Text);
+
+            //return;
+
             if (tbManualInput.Text.Length < 44)
                 return;
             var nf = new NotaFiscal();
@@ -423,6 +428,20 @@ namespace DoaNotaPR
                 Uri myUri = new Uri(ConvertLink(qrInfo));
                 if (!HttpUtility.ParseQueryString(myUri.Query.ToLowerInvariant()).AllKeys.Contains("chNFe".ToLowerInvariant()))
                 {
+                    if (!HttpUtility.ParseQueryString(myUri.Query.ToLowerInvariant()).AllKeys.Contains("?p".ToLowerInvariant()))
+                    {
+                        var dados = myUri.Query.ToString();
+                        nf.Chave = dados.Substring(3, 44);
+
+                        nf.DataEmissao = DateTime.MinValue;
+
+                        nf.Valor = 0.00;
+
+                        nf.DataCadastro = DateTime.Now;
+
+                        return nf;
+                    }
+
                     Message = Constantes.MENSAGEM_ERRO_LEITURA_QRCODE;
                     return null;
                 }
