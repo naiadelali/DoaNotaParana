@@ -26,6 +26,7 @@ using System.Runtime.InteropServices;
 using DoaNotaPR.Properties;
 using AForge.Imaging.Filters;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace DoaNotaPR
 {
@@ -206,7 +207,10 @@ namespace DoaNotaPR
             }
 
             videoSource = new VideoCaptureDevice(videoDevices[comboBoxCameraSource.SelectedIndex].MonikerString);
+            
+
             videoSource.VideoResolution = videoSource.VideoCapabilities[cbResolutions.SelectedIndex];
+
             videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
             videoSource.Start();
 
@@ -283,6 +287,7 @@ namespace DoaNotaPR
                    
                     if (image != null)
                     {
+
                         var message = ExtractQRCodeMessageFromImage((MakeGrayscale3(image)));// AdjustContrast(MakeGrayscale3(image),3.00f));
 
                         if (message != null)
@@ -433,9 +438,12 @@ namespace DoaNotaPR
                         var dados = myUri.Query.ToString();
                         nf.Chave = dados.Substring(3, 44);
 
-                        nf.DataEmissao = DateTime.MinValue;
+                        var info = qrInfo.Split('|');
+                        nf.DataEmissao = DateTime.ParseExact($"01/{nf.Chave.Substring(4, 2)}/{nf.Chave.Substring(2,2)}","dd/MM/yy", CultureInfo.InvariantCulture) ;
 
-                        nf.Valor = 0.00;
+                        double value = 0.00;
+                        double.TryParse(info[4],NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out value);
+                        nf.Valor = value;
 
                         nf.DataCadastro = DateTime.Now;
 
